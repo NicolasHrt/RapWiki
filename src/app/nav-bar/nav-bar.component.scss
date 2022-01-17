@@ -1,0 +1,40 @@
+nav {
+  padding:10px 0 10px 0;
+  .container{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    h1{
+      font-size: 40px;
+    }
+    ul {
+      font-weight: 500;
+      display: flex;
+      gap: 50px;
+      li
+      {
+        list-style: none;
+
+        a {
+          text-decoration: none;
+          color: black;
+        }
+    }
+    }
+  }
+}
+
+.button{
+  padding: 7px 25px;
+  border-radius: 20px;
+  background-color: black;
+  color: white;
+  line-height: 1;
+  cursor: pointer;
+}
+
+
+
+
+
+

@@ -1,0 +1,102 @@
+.container{
+  position:relative;
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(12,1fr);
+
+  .search{
+    display: flex;
+    height: 80px;
+    box-shadow: lightgray 5px 5px 10px;
+    z-index: 1;
+    position: absolute;
+    bottom: 40px;
+    input{
+
+      padding: 20px 50px;
+      border: none;
+
+      font-size: 17px;
+    }
+    button{
+      font-family: 'Poppins', sans-serif;
+      font-size: 35px;
+      font-weight: 500;
+      text-align: center;
+      line-height: 1;
+      border:none;
+      outline: none;
+      padding:20px 30px;
+      background-color:rgba(136, 197, 137,0.9);
+      cursor: pointer;
+      transition: all 1s ease-out;
+      &:hover{
+        opacity: 1;
+      }
+    }
+  }
+
+  .left{
+    grid-column: 1/4;
+  }
+  h1{
+    font-size: 60px;
+    font-weight: 500;
+    margin: 150px 0px;
+  }
+
+  .right{
+    display: flex;
+    grid-column: 4/13;
+    gap: 24px;
+    .item{
+      position: relative;
+      font-size: 30px;
+      color: white;
+      padding:20px;
+      display:flex;
+      background-size: cover;
+      background-repeat:no-repeat;
+      background-position:center;
+      overflow: hidden;
+      width: 33%;
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      border-radius: 15px;
+      transition: all 0.5s ease-in-out;
+      &:hover{
+        width:100%;
+        transform:scale(1.02);
+        .NameRappers{
+          transform: rotate(0deg);
+          font-size: 50px;
+        }
+        .Stream{
+          opacity: 1;
+        }
+      }
+      &:before{
+        content: '';
+        inset: 0;
+
+        background: linear-gradient(0deg, rgba(0,0,0,0.31416316526610644) 0%, rgba(0,0,0,0) 25%);
+        position: absolute;
+      }
+      .NameRappers{
+        position: absolute;
+        transform: rotate(90deg);
+        left: 10px;
+        top: 60px;
+        z-index: 0;
+        transition: all 0.5s ease-in-out;
+      }
+      .Stream{
+        position: absolute;
+        right: 10px;
+        bottom: 30px;
+        z-index: 0;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+      }
+    }
+  }
+}
